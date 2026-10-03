@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LumaStore | Modern E-commerce</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div id="toast-container"></div>
+
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="#home"><span class="brand-mark">L</span><span>Luma<span>Store</span></span></a>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#orders" id="orders-link">Orders</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" id="search-btn" title="Search">⌕</button>
+        <button class="cart-btn" id="cart-btn">Bag <span id="cart-count">0</span></button>
+        <button class="login-btn" id="auth-btn">Login</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">CURATED FOR EVERYDAY LIFE</span>
+          <h1>Simple things.<br><em>Beautifully chosen.</em></h1>
+          <p>Discover thoughtfully designed essentials for your desk, wardrobe and everyday routine.</p>
+          <a href="#shop" class="primary-btn">Explore collection <span>→</span></a>
+          <div class="trust-row">
+            <span>✓ Secure checkout</span>
+            <span>✓ Quality picks</span>
+            <span>✓ Easy ordering</span>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-image"></div>
+          <div class="floating-card">
+            <span class="mini-label">EDITOR'S PICK</span>
+            <strong>Aura Headphones</strong>
+            <span>Premium sound · ₹3,499</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="shop-section container" id="shop">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">THE COLLECTION</span>
+          <h2>Shop favorites</h2>
+        </div>
+        <div class="filters">
+          <button class="filter active" data-category="All">All</button>
+          <button class="filter" data-category="Audio">Audio</button>
+          <button class="filter" data-category="Wearables">Wearables</button>
+          <button class="filter" data-category="Workspace">Workspace</button>
+          <button class="filter" data-category="Fashion">Fashion</button>
+        </div>
+      </div>
+      <div id="products" class="product-grid"></div>
+    </section>
+
+    <section class="newsletter">
+      <div class="container newsletter-inner">
+        <div><span class="eyebrow">STAY IN THE LOOP</span><h2>Good products, no noise.</h2></div>
+        <form id="newsletter-form"><input type="email" placeholder="Your email address" required><button class="primary-btn">Subscribe</button></form>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container footer-inner"><strong>LumaStore</strong><span>Built as CodeAlpha Full Stack Task 1</span><span>© 2026 LumaStore</span></div></footer>
+
+  <div class="modal-backdrop" id="modal-backdrop">
+    <div class="modal" id="modal"></div>
+  </div>
+
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="drawer-head"><div><span class="eyebrow">YOUR BAG</span><h3>Shopping cart</h3></div><button class="close-btn" id="close-cart">×</button></div>
+    <div id="cart-items" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="total-line"><span>Subtotal</span><strong id="cart-total">₹0</strong></div>
+      <button class="primary-btn full" id="checkout-btn">Proceed to checkout →</button>
+    </div>
+  </aside>
+  <div class="drawer-overlay" id="drawer-overlay"></div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
